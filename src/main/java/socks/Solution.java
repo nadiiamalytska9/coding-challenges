@@ -9,19 +9,16 @@ import java.util.Set;
 
 public class Solution {
 
-    static int sockMerchant(int n, int[] ar) {
+    static int sockMerchant(int socksAmount, int[] socks) {
         Set<Integer> indexList = new HashSet<>();
         int socksCount = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if (indexList.contains(j) && indexList.contains(i) || !indexList.contains(j) && indexList.contains(i)) {
-                    break;
-                } else {
-                    if (ar[i] == ar[j]) {
+        for (int i = 0; i < socksAmount; i++) {
+            for (int j = i + 1; j < socksAmount; j++) {
+                if (!indexList.contains(j) && !indexList.contains(i)) {
+                    if (socks[i] == socks[j]) {
                         socksCount++;
                         indexList.add(i);
                         indexList.add(j);
-                        break;
                     }
                 }
             }
