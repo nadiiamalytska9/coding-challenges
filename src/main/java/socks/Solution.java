@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class Solution {
 
-    static int sockMerchant(int socksAmount, int[] socks) {
+    public static int sockMerchant(int socksAmount, int[] socks) {
         Set<Integer> indexList = new HashSet<>();
         int socksCount = 0;
         for (int i = 0; i < socksAmount; i++) {
