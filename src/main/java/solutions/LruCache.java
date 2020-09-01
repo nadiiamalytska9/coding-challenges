@@ -7,7 +7,7 @@ public class LruCache<K, V> extends LinkedHashMap<K, V> {
     private int MAX_SIZE;
 
     private LruCache(int size) {
-        super(size, 0.75f, true);
+        super(size + 1, 1.1f, true);
         this.MAX_SIZE = size;
     }
 
