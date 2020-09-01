@@ -1,19 +1,19 @@
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import socks.Solution;
+import solutions.SocksMerchantSolution;
 
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class SocksCountTest {
+public class SocksMerchantSolutionTest {
 
     @ParameterizedTest
     @MethodSource("provideTestArguments")
     public void isSocksComputingRight(int socksAmount, int[] socks, int expectedPairsNumber) {
-        int actualPairsNumber = Solution.sockMerchant(socksAmount, socks);
+        int actualPairsNumber = SocksMerchantSolution.sockMerchant(socksAmount, socks);
         assertThat("Socks pairs number [" + expectedPairsNumber + "] and [" + actualPairsNumber + "] are different!",
                 expectedPairsNumber, is(actualPairsNumber));
     }
