@@ -37,6 +37,6 @@ public class LruCacheTest {
 
         lruCache.put(7, "seven");
         lruCache.put(8, "eight");
-        assertEquals("[3, 4, 5, 7, 8]", keys.toString());
+        assertEquals("[5, 1, 2, 7, 8]", keys.toString());
     }
 }
