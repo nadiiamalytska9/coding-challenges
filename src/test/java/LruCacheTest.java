@@ -32,6 +32,8 @@ public class LruCacheTest {
     public void shouldRemoveEldestEntryAfterInsertion() {
         Set<Integer> keys = lruCache.keySet();
         assertEquals("[1, 2, 3, 4, 5]", keys.toString());
+        lruCache.get(1);
+        lruCache.get(2);
 
         lruCache.put(7, "seven");
         lruCache.put(8, "eight");
