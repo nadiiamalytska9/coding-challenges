@@ -1,4 +1,4 @@
-package solutions;
+package algorithms.book;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

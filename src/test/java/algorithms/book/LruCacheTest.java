@@ -1,6 +1,7 @@
+package algorithms.book;
+
 import org.junit.Before;
 import org.junit.Test;
-import solutions.LruCache;
 
 import java.util.Set;
 

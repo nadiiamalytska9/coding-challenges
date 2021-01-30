@@ -1,4 +1,4 @@
-package solutions;
+package challenges.solution;
 
 public class JumpingCloud {
     public static int jumpingOnClouds(int cloudsCount, int[] clouds) {

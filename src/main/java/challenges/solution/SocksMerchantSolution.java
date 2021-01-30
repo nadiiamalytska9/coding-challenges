@@ -1,4 +1,4 @@
-package solutions;
+package challenges.solution;
 
 import java.util.HashSet;
 import java.util.Set;
