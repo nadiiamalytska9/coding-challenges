@@ -8,7 +8,7 @@ import static org.junit.Assert.assertThat;
 
 public class BubbleSortTest {
     @Test
-    public void shouldSortArray() throws Exception {
+    public void should_sort_array() throws Exception {
         int[] arr = new int[]{3, 2, 1};
 
         String actualOutput = tapSystemOut(() -> {

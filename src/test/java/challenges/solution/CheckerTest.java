@@ -9,7 +9,7 @@ import static org.junit.Assert.assertThat;
 
 public class CheckerTest {
     @Test
-    public void shouldSortPlayers() {
+    public void should_sort_players() {
         Player p1 = new Player("amy", 100);
         Player p2 = new Player("david", 100);
         Player p3 = new Player("heraldo", 50);
