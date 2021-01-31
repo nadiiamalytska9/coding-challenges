@@ -17,7 +17,7 @@ public class BinaryTreeHeightTest {
 
         int height = BinaryTreeHeight.height(root);
 
-        assertThat("Expected minimal win steps count: [" + expectedHeight + "]. But received wrong value: [" + height + "]",
+        assertThat("Expected height: [" + expectedHeight + "]. But received wrong value: [" + height + "]",
                 expectedHeight, is(height));
     }
 }
