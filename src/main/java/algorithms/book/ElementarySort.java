@@ -23,7 +23,6 @@ public class ElementarySort {
             for (int i = j - 1; i > -1 && arr[i] > key; i--) {
                 arr[i + 1] = arr[i];
             }
-            //arr[i + 1] = key;
         }
     }
 
