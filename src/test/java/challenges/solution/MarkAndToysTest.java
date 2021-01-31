@@ -15,7 +15,7 @@ public class MarkAndToysTest {
     public void isBoughTheMaximumToysNumber(int budget, int[] toys, int expectedToysNumber) {
         int actualToysNumber = MarkAndToys.maximumToys(toys, budget);
         assertThat("Expected maximum number of toys: [" + expectedToysNumber + "]. But received wrong value: [" + actualToysNumber + "]",
-                expectedToysNumber, is(actualToysNumber));
+                actualToysNumber, is(expectedToysNumber));
     }
 
     private static Stream<Arguments> provideTestArguments() {

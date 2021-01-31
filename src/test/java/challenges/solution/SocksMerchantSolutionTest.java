@@ -16,7 +16,7 @@ public class SocksMerchantSolutionTest {
     public void isSocksComputingRight(int socksAmount, int[] socks, int expectedPairsNumber) {
         int actualPairsNumber = SocksMerchantSolution.sockMerchant(socksAmount, socks);
         assertThat("Socks pairs number [" + expectedPairsNumber + "] and [" + actualPairsNumber + "] are different!",
-                expectedPairsNumber, is(actualPairsNumber));
+                actualPairsNumber, is(expectedPairsNumber));
     }
 
     private static Stream<Arguments> provideTestArguments() {

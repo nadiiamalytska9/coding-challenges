@@ -20,6 +20,6 @@ public class CheckerTest {
         Arrays.sort(players, new Checker());
 
         assertThat("Expected sorted players: [" + expectedSortedPlayers + "]. But received wrong value: [" + players + "]",
-                expectedSortedPlayers, is(players));
+                players, is(expectedSortedPlayers));
     }
 }

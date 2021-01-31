@@ -18,6 +18,6 @@ public class BinaryTreeHeightTest {
         int height = BinaryTreeHeight.height(root);
 
         assertThat("Expected height: [" + expectedHeight + "]. But received wrong value: [" + height + "]",
-                expectedHeight, is(height));
+                height, is(expectedHeight));
     }
 }

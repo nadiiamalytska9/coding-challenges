@@ -16,6 +16,6 @@ public class BubbleSortTest {
         });
         String expectedOutput = "Array is sorted in 3 swaps. First Element: 1 Last Element: 3\n";
         assertThat("Expected output: [" + expectedOutput + "]. But received wrong value: [" + actualOutput + "]",
-                expectedOutput, is(actualOutput));
+                actualOutput, is(expectedOutput));
     }
 }

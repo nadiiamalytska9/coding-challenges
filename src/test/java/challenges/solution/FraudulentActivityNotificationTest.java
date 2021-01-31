@@ -15,7 +15,7 @@ public class FraudulentActivityNotificationTest {
     public void isActivityNotificationsRight(int[] expenditure, int d, int expectedNotificationNumber) {
         int actualNotificationNumber = FraudulentActivityNotification.activityNotifications(expenditure, d);
         assertThat("Expected notification number: [" + expectedNotificationNumber + "]. But received wrong value: [" + actualNotificationNumber + "]",
-                expectedNotificationNumber, is(actualNotificationNumber));
+                actualNotificationNumber, is(expectedNotificationNumber));
     }
 
     private static Stream<Arguments> provideTestArguments() {

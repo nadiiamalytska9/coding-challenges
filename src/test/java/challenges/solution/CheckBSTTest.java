@@ -20,6 +20,6 @@ public class CheckBSTTest {
 
         assertThat("Expected: [" + true + "]. " +
                         "But received wrong value: [" + isActualBst + "]",
-                true, is(isActualBst));
+                isActualBst, is(true));
     }
 }

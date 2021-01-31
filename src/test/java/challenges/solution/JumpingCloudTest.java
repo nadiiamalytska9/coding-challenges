@@ -15,7 +15,7 @@ public class JumpingCloudTest {
     public void isMinimalWinStepsCountRight(int cloudsCount, int[] clouds, int expectedMinimalWinStepsCount) {
         int actualPairsNumber = JumpingCloud.jumpingOnClouds(cloudsCount, clouds);
         assertThat("Expected minimal win steps count: [" + expectedMinimalWinStepsCount + "]. But received wrong value: [" + actualPairsNumber + "]",
-                expectedMinimalWinStepsCount, is(actualPairsNumber));
+                actualPairsNumber, is(expectedMinimalWinStepsCount));
     }
 
     private static Stream<Arguments> provideTestArguments() {

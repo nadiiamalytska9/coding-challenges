@@ -21,6 +21,6 @@ public class LowestCommonAncestorTest {
 
         assertThat("Expected lowest common ancestor: [" + expectedHeight + "]. " +
                         "But received wrong value: [" + actualCommonAncestor + "]",
-                expectedHeight, is(actualCommonAncestor));
+                actualCommonAncestor, is(expectedHeight));
     }
 }
