@@ -7,15 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ValidStringTest {
     @ParameterizedTest
     @MethodSource("provideTestArguments")
     public void isMinimalWinStepsCountRight(String s, boolean isExpectedValid) {
         boolean isActualValid = ValidString.isValid(s);
-        assertThat("Expected value: [" + isExpectedValid + "]. But received wrong value: [" + isActualValid + "]",
-                isActualValid, is(isExpectedValid));
+        assertThat(isActualValid, is(isExpectedValid));
     }
 
     private static Stream<Arguments> provideTestArguments() {

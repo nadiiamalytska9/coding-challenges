@@ -7,15 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class FraudulentActivityNotificationTest {
     @ParameterizedTest
     @MethodSource("provideTestArguments")
     public void isActivityNotificationsRight(int[] expenditure, int d, int expectedNotificationNumber) {
         int actualNotificationNumber = FraudulentActivityNotification.activityNotifications(expenditure, d);
-        assertThat("Expected notification number: [" + expectedNotificationNumber + "]. But received wrong value: [" + actualNotificationNumber + "]",
-                actualNotificationNumber, is(expectedNotificationNumber));
+        assertThat(actualNotificationNumber, is(expectedNotificationNumber));
     }
 
     private static Stream<Arguments> provideTestArguments() {

@@ -7,15 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MakingAnagramsTest {
     @ParameterizedTest
     @MethodSource("provideTestArguments")
     public void isDeleteCharactersNumberRight(String a, String b, int expectedDeletedCharactersNumber) {
         int actualDeletedCharactersNumber = MakingAnagrams.makeAnagram(a, b);
-        assertThat("Expected deleted characters number: [" + expectedDeletedCharactersNumber + "]. But received wrong value: [" + actualDeletedCharactersNumber + "]",
-                actualDeletedCharactersNumber, is(expectedDeletedCharactersNumber));
+        assertThat(actualDeletedCharactersNumber, is(expectedDeletedCharactersNumber));
     }
 
     private static Stream<Arguments> provideTestArguments() {

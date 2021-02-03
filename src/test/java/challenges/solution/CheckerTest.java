@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class CheckerTest {
     @Test
@@ -19,7 +19,6 @@ public class CheckerTest {
 
         Arrays.sort(players, new Checker());
 
-        assertThat("Expected sorted players: [" + expectedSortedPlayers + "]. But received wrong value: [" + players + "]",
-                players, is(expectedSortedPlayers));
+        assertThat(players, is(expectedSortedPlayers));
     }
 }

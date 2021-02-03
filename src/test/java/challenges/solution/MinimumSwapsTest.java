@@ -7,15 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MinimumSwapsTest {
     @ParameterizedTest
     @MethodSource("provideTestArguments")
     public void isSwapCountMinimum(int[] arr, int expectedMinimumSwaps) {
         int actualMinimumSwaps = MinimumSwaps.minimumSwaps(arr);
-        assertThat("Expected minimum swaps count: [" + expectedMinimumSwaps + "]. But received wrong value: [" + actualMinimumSwaps + "]",
-                actualMinimumSwaps, is(expectedMinimumSwaps));
+        assertThat(actualMinimumSwaps, is(expectedMinimumSwaps));
     }
 
     private static Stream<Arguments> provideTestArguments() {

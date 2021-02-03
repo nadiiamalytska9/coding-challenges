@@ -7,15 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class RepeatedStringTest {
     @ParameterizedTest
     @MethodSource("provideTestArguments")
     public void isMinimalWinStepsCountRight(String string, long n, long expectedRepeatedStringsCount) {
         long actualRepeatedStringsCount = RepeatedString.repeatedString(string, n);
-        assertThat("Expected repeated string count: [" + expectedRepeatedStringsCount + "]. But received wrong value: [" + actualRepeatedStringsCount + "]",
-                actualRepeatedStringsCount, is(expectedRepeatedStringsCount));
+        assertThat(actualRepeatedStringsCount, is(expectedRepeatedStringsCount));
     }
 
     private static Stream<Arguments> provideTestArguments() {

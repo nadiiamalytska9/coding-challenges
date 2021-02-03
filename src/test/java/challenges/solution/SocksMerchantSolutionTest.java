@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SocksMerchantSolutionTest {
 
@@ -15,8 +15,7 @@ public class SocksMerchantSolutionTest {
     @MethodSource("provideTestArguments")
     public void isSocksComputingRight(int socksAmount, int[] socks, int expectedPairsNumber) {
         int actualPairsNumber = SocksMerchantSolution.sockMerchant(socksAmount, socks);
-        assertThat("Socks pairs number [" + expectedPairsNumber + "] and [" + actualPairsNumber + "] are different!",
-                actualPairsNumber, is(expectedPairsNumber));
+        assertThat(actualPairsNumber, is(expectedPairsNumber));
     }
 
     private static Stream<Arguments> provideTestArguments() {

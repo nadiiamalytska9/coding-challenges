@@ -3,7 +3,7 @@ package challenges.solution;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class LowestCommonAncestorTest {
     @Test
@@ -19,8 +19,6 @@ public class LowestCommonAncestorTest {
 
         int actualCommonAncestor = LowestCommonAncestor.lca(root, 1, 7).data;
 
-        assertThat("Expected lowest common ancestor: [" + expectedHeight + "]. " +
-                        "But received wrong value: [" + actualCommonAncestor + "]",
-                actualCommonAncestor, is(expectedHeight));
+        assertThat(actualCommonAncestor, is(expectedHeight));
     }
 }

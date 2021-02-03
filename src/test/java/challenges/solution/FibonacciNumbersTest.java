@@ -7,15 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class FibonacciNumbersTest {
     @ParameterizedTest
     @MethodSource("provideTestArguments")
     public void isMinimalWinStepsCountRight(int n, int expectedFibonacciSum) {
         int actualFibonacciSum = FibonacciNumbers.fibonacci(n);
-        assertThat("Expected fibonacci sum: [" + expectedFibonacciSum + "]. But received wrong value: [" + actualFibonacciSum + "]",
-                actualFibonacciSum, is(expectedFibonacciSum));
+        assertThat(actualFibonacciSum, is(expectedFibonacciSum));
     }
 
     private static Stream<Arguments> provideTestArguments() {

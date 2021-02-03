@@ -7,15 +7,14 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class NewYearChaosTest {
     @ParameterizedTest
     @MethodSource("provideTestArguments")
     public void isMinimalWinStepsCountRight(int[] arr, int expectedBribesAmount) {
         int actualBribesAmount = NewYearChaos.minimumBribes(arr);
-        assertThat("Expected bribes amount: [" + expectedBribesAmount + "]. But received wrong value: [" + actualBribesAmount + "]",
-                actualBribesAmount, is(expectedBribesAmount));
+        assertThat(actualBribesAmount, is(expectedBribesAmount));
     }
 
     private static Stream<Arguments> provideTestArguments() {

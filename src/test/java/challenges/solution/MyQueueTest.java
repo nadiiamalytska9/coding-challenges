@@ -2,10 +2,9 @@ package challenges.solution;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MyQueueTest {
     static MyQueue<Integer> myQueue;
@@ -24,8 +23,7 @@ public class MyQueueTest {
 
         Integer actualElement = myQueue.peek();
 
-        assertThat("Expected queue element: [" + expectedElement + "]. But received wrong value: [" + actualElement + "]",
-                actualElement, is(expectedElement));
+        assertThat(actualElement, is(expectedElement));
     }
 
     @Test
@@ -34,7 +32,6 @@ public class MyQueueTest {
 
         Integer actualElement = myQueue.peek();
 
-        assertThat("Expected queue element: [" + expectedElement + "]. But received wrong value: [" + actualElement + "]",
-                actualElement, is(expectedElement));
+        assertThat(actualElement, is(expectedElement));
     }
 }

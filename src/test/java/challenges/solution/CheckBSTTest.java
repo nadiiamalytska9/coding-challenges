@@ -3,7 +3,7 @@ package challenges.solution;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class CheckBSTTest {
     @Test
@@ -18,8 +18,6 @@ public class CheckBSTTest {
 
         boolean isActualBst = CheckBST.checkBST(root);
 
-        assertThat("Expected: [" + true + "]. " +
-                        "But received wrong value: [" + isActualBst + "]",
-                isActualBst, is(true));
+        assertThat(isActualBst, is(true));
     }
 }
