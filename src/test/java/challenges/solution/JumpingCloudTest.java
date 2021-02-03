@@ -20,7 +20,7 @@ public class JumpingCloudTest {
 
     private static Stream<Arguments> provideTestArguments() {
         return Stream.of(
-                Arguments.of(7, new int[]{0, 0, 1, 0, 0, 1, 0}, 10),
+                Arguments.of(7, new int[]{0, 0, 1, 0, 0, 1, 0}, 4),
                 Arguments.of(6, new int[]{0, 0, 0, 0, 1, 0}, 3),
                 Arguments.of(12, new int[]{0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0}, 6),
                 Arguments.of(6, new int[]{0, 1, 0, 0, 0, 1, 0}, 3)
